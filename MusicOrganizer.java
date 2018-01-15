@@ -112,4 +112,21 @@ public class MusicOrganizer
             System.out.println("No existe nada con ese criterio de busqueda");
         }
     }
+
+    /**
+     * reproducir los primeros 15 seg de las canciones del artista segun el criterio de busqueda
+     */
+
+    public void playAndWait(String criterioDeBusqueda){
+        boolean criterio = false;
+        for(String filename : files){
+            if(filename.contains(criterioDeBusqueda)){
+                player.playSample(filename);
+                criterio = true;
+            }
+        }
+        if(criterio == false){
+            System.out.println("No existe nada con ese criterio de busqueda");
+        }
+    }
 }

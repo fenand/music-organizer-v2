@@ -101,11 +101,15 @@ public class MusicOrganizer
      */
 
     public void listMatching(String criterioDeBusqueda){
-
+        boolean criterio = false;
         for(String filename : files){
             if(filename.contains(criterioDeBusqueda)){
                 System.out.println(filename);
+                criterio = true;
             }
+        }
+        if(criterio == false){
+            System.out.println("No existe nada con ese criterio de busqueda");
         }
     }
 }

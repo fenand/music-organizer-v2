@@ -138,12 +138,12 @@ public class MusicOrganizer
      * no se encuentra ninguna correspondencia.
      */
     public int findFirst(String searchString) {
-        int numeroTotalDeFiles = files.size();
         
+        int numeroTotalDeFiles = files.size();
         int index = 0;
         boolean searching = true;
 
-        while(searching == true && index < numeroTotalDeFiles) {
+        while(searching == true && index < numeroTotalDeFiles ) {
             String filename = files.get(index);
             if(filename.contains(searchString)) {
                 searching = false;

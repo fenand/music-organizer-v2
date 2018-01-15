@@ -94,4 +94,18 @@ public class MusicOrganizer
             posicion++;
         }
     }
+
+    /**
+     * Metodo para enumerar unicamente los archios que se corresponden 
+     * con el criterio de busqueda
+     */
+
+    public void listMatching(String criterioDeBusqueda){
+
+        for(String filename : files){
+            if(filename.contains(criterioDeBusqueda)){
+                System.out.println(filename);
+            }
+        }
+    }
 }
